@@ -1,0 +1,487 @@
+.charsheet input {
+    display: inline-block;
+    width: 165px;
+}
+.charsheet input.sheet-tiny {
+    display: inline-block;
+    width: 10px;
+}
+.charsheet input.sheet-short {
+   display: inline-block;
+   width: 3.5em;
+}
+.charsheet input.sheet-mid {
+   display: inline-block;
+   width: 5.0em;
+}
+.charsheet input.sheet-mid2 {
+   display: inline-block;
+   width: 7.0em;
+}
+.charsheet input.sheet-medium {
+   display: inline-block;
+   width: 125px;
+}
+.charsheet input[type="number"].sheet-tiny {
+    display: inline-block;
+    width: 10px;
+}
+    input[type="number"].sheet-tiny::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+    input[type="number"].sheet-nobut::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+.charsheet input.sheet-tiny {
+    display: inline-block;
+    width: 10px;
+}
+
+.charsheet select.sheet-short{
+    display: inline-block;
+    margin: 0px 0px;
+    width: 4.0em;
+}
+.charsheet input.sheet-mid {
+   display: inline-block;
+   width: 5.0em;
+}
+.charsheet input.sheet-mid2 {
+   display: inline-block;
+   width: 7.0em;
+}
+.charsheet input[type="checkbox"].left {
+    float: left;
+    margin: 5px 0px;
+    width: 2px;
+}
+input.sheet-arrow
+{
+    float: left;
+}
+
+input.sheet-arrow:checked ~ div.sheet-body
+{
+    display: none;
+}
+/* Hide actual radio/checkbox */
+input[type="radio"],
+input[type="checkbox"]
+{
+    opacity: 0;
+    width: 10px;
+    height: 10px;
+    position: relative;
+    top: 5px;
+    left: 6px;
+    margin: -10px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+/* Fake radio/checkbox */
+input[type="radio"] + span::before,
+input[type="checkbox"] + span::before
+{
+    margin-right: 4px;
+    border: solid 1px #a8a8a8;
+    line-height: 14px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    
+    -moz-box-shadow: 0 0 2px #ccc;
+    -webkit-box-shadow: 0 0 2px #ccc;
+    box-shadow: 0 0 2px #ccc;
+    
+    background: #f6f6f6;
+    background: -moz-radial-gradient(#f6f6f6, #dfdfdf);
+    background: -webkit-radial-gradient(#f6f6f6, #dfdfdf);
+    background: -ms-radial-gradient(#f6f6f6, #dfdfdf);
+    background: -o-radial-gradient(#f6f6f6, #dfdfdf);
+    background: radial-gradient(#f6f6f6, #dfdfdf);
+}
+
+/* Fake radio */
+input[type="radio"] + span::before
+{
+    content: "";
+    width: 12px;
+    height: 12px;
+    font-size: 24px;
+    
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+input[type="radio"]:checked + span::before
+{
+    content: "•";
+}
+
+/* Fake checkbox */
+input[type="checkbox"] + span::before
+{
+    content: "";
+    width: 14px;
+    height: 14px;
+    font-size: 12px;
+    
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+}
+input[type="checkbox"]:checked + span::before
+{
+    content: "✓";
+}
+
+.charsheet div.sheet-tab-content { display: none; }
+
+.charsheet input.sheet-tab1:checked ~ div.sheet-tab1,
+.charsheet input.sheet-tab2:checked ~ div.sheet-tab2,
+.charsheet input.sheet-tab3:checked ~ div.sheet-tab3,
+.charsheet input.sheet-tab4:checked ~ div.sheet-tab4
+{
+    display: block;
+}
+.charsheet input.sheet-tab + span::before,
+.charsheet input.sheet-tab + span::before
+{
+    margin-right: 4px;
+    border: solid 1px #a8a8a8;
+    line-height: 14px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    
+    -moz-box-shadow: 0 0 2px #ccc;
+    -webkit-box-shadow: 0 0 2px #ccc;
+    box-shadow: 0 0 2px #ccc;
+    
+    background: #f6f6f6;
+    background: -moz-radial-gradient(#f6f6f6, #dfdfdf);
+    background: -webkit-radial-gradient(#f6f6f6, #dfdfdf);
+    background: -ms-radial-gradient(#f6f6f6, #dfdfdf);
+    background: -o-radial-gradient(#f6f6f6, #dfdfdf);
+    background: radial-gradient(#f6f6f6, #dfdfdf);
+}
+
+/* Fake radio */
+.charsheet input.sheet-tab + span::before
+{
+    content: "";
+    width: 12px;
+    height: 12px;
+    font-size: 24px;
+    
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+.charsheet input.sheet-tab:checked + span::before
+{
+    content: "•";
+}
+.charsheet input.sheet-tab:not(:first-child)::before
+{
+    border-left: none;
+}
+
+.sheet-rolltemplate-AtS_attack table {
+    width: 100%;
+}
+
+.sheet-rolltemplate-AtS_attack div.sheet-attack-head {
+    background-color: #ff0000;
+    border: 1px solid black;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    margin-bottom: 0px;
+}
+
+.sheet-rolltemplate-AtS_attack th {
+	background-color: none;
+	color: #ffffff;
+	padding: 4px;
+	border-bottom: 1px solid black;
+}
+
+.sheet-rolltemplate-AtS_attack span.sheet-title {
+    font-size: 12pt;
+    font-weight: bold;
+    font-style: italic;
+    font-family: "verdana";
+}
+
+.sheet-rolltemplate-AtS_attack span.sheet-subtitle {
+    font-size: 8pt;
+    font-weight: bold;
+    font-style: italic;
+    font-family: "verdana";
+}
+
+.sheet-rolltemplate-AtS_attack div.sheet-attack-body {
+    background-color: white;
+    border: 1px solid black;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    margin-top: -1px;
+}
+
+.sheet-rolltemplate-AtS_attack td {
+	padding: 5px;
+	text-align: center;
+}
+
+.sheet-rolltemplate-AtS_attack td.sheet-c1 {
+	vertical-align: bottom;
+}
+.sheet-rolltemplate-AtS_attack td.sheet-c2 {
+	position: relative;
+	background-image: url(https://s3.amazonaws.com/files.d20.io/images/28124902/PjI5pkEGkF7YNSQVQtPt5Q/thumb.png?1485773964);
+    background-repeat: no-repeat;
+    background-size: 50px 50px;
+    background-position: center;
+    height: 50px;
+}
+
+.sheet-rolltemplate-AtS_attack td.sheet-c3 {
+    position: relative;
+    background-image: url(https://s3.amazonaws.com/files.d20.io/images/28124903/rkHoUV4kJbduRodmUrVGnw/thumb.png?1485773964);
+    background-repeat: no-repeat;
+    background-size: 50px 50px;
+    background-position: center;
+    height: 50px;
+}
+.sheet-rolltemplate-AtS_attack td.sheet-c4 {
+	vertical-align: top;
+}
+
+.sheet-rolltemplate-AtS_attack td.sheet-c5 {
+    background-color: #00ff00;
+    border-top: 1px solid #000000;
+    font-size: 12pt;
+    font-weight: bold;
+    font-style: italic;
+    font-family: "verdana";
+    color: #ffffff;
+}
+
+.sheet-rolltemplate-AtS_attack td.sheet-c6 {
+    background-color: #ff0000;
+    border-top: 1px solid #000000;
+    font-size: 12pt;
+    font-weight: bold;
+    font-style: italic;
+    font-family: "verdana";
+    color: #ffffff;
+}
+
+/*
+.sheet-rolltemplate-AtS_attack tr:nth-child(odd) {
+	background-color: rgba(217, 217, 214,1);
+}
+
+.sheet-rolltemplate-AtS_attack tr:nth-child(even) {
+	background-color: rgba(233, 233, 233,1);
+}
+*/
+
+.sheet-rolltemplate-AtS_attack .inlinerollresult  {
+	display: inline-block;
+    font-size: 12pt;
+    font-weight: bold;
+    color: #000000;
+	text-align: center;
+	vertical-align: middle;
+	border: none;
+	background-color: transparent;
+}
+
+.sheet-rolltemplate-AtS_attack .inlinerollresult.fullcrit {
+	color: #00FF00;
+	border: none;
+}
+
+.sheet-rolltemplate-AtS_attack .inlinerollresult.fullfail {
+	color: #FF0000;
+	border: none;
+}
+
+.sheet-rolltemplate-AtS_attack .inlinerollresult.importantroll {
+	color: #000000;
+	border: none;
+}
+
+
+.sheet-rolltemplate-AtS_spell div.sheet-ats_spell-container {
+	border: none;
+	text-align: left;
+}
+
+.sheet-rolltemplate-AtS_spell div.sheet-sp_header {
+	border: 1px solid #000000;
+	border-top-right-radius: 8px;
+	border-top-left-radius: 8px;
+	background: #0027e7;
+	padding: 3px;
+	padding-top: 5px;
+	margin-bottom: 0px;
+    font-family: "verdana";
+}
+
+/*/ <table class="sheet-spinfo-title"> /*/
+.sheet-rolltemplate-AtS_spell table.sheet-spinfo-title {
+    width: 100%;
+    border: none;
+}
+
+/*/ <td class="sheet-spinfo-c1"> /*/
+.sheet-rolltemplate-AtS_spell td.sheet-spinfo-c1 {
+    font-size: 12pt;
+    font-weight: bold;
+    color: #ffffff;
+    text-align: center;
+    font-family: "verdana";
+}
+
+/*/ <td class="sheet-spinfo-c2"> /*/
+.sheet-rolltemplate-AtS_spell td.sheet-spinfo-c2 {
+    font-size: 8pt;
+    color: #ffffff;
+    text-align: center;
+    font-style: italic;
+    font-family: "verdana";
+}
+
+/*/ <div class="sheet-sp_description"> /*/
+.sheet-rolltemplate-AtS_spell div.sheet-sp_description {
+	border: 1px solid #000000;
+	border-bottom-right-radius: 8px;
+	border-bottom-left-radius: 8px;
+	background: #f2f1cc;
+	padding: 4px;
+	margin-top: -1px;
+	color: #000000;
+}
+
+/*/ <table class="sheet-spinfo-body"> /*/
+.sheet-rolltemplate-AtS_spell table.sheet-spinfo-body {
+    width: 100%;
+}
+
+/*/ <td class="sheet-spinfo-c3"> /*/
+.sheet-rolltemplate-AtS_spell td.sheet-spinfo-c3 {
+    font-size: 10pt;
+    color: #000000;
+    text-align: center;
+    font-family: "verdana";
+    border: 1px solid black;
+    padding: 4px;
+    margin: 0px;
+}
+
+/*/ <span class="sheet-spproperty"> /*/
+.sheet-rolltemplate-AtS_spell span.sheet-spproperty {
+    font-size: 9pt;
+    font-weight: bold;
+    color: #000000;
+    text-align: center;
+    font-family: "verdana";
+}
+
+.sheet-rolltemplate-AtS_spell td.sheet-spinfo-c4 {
+    font-size: 9pt;
+    color: #000000;
+    text-align: left;
+    font-family: "verdana";
+    border: 1px solid black;
+    padding: 3px;
+    margin: 0px;
+}
+
+/*/ <rolltemplate class="sheet-rolltemplate-AtS_default"> /*/
+/*/ <div class="default-container"> /*/
+.sheet-rolltemplate-AtS_default div.sheet-default-container {
+	border: none;
+	text-align: left;
+}
+
+/*/ <div class="default_header">{{name}}</div> /*/
+.sheet-rolltemplate-AtS_default div.sheet-default-head {
+	border: 1px solid #000000;
+	border-top-right-radius: 8px;
+	border-top-left-radius: 8px;
+	background: #205617;
+	padding: 3px;
+	padding-top: 5px;
+	margin-bottom: 0px;
+}
+
+.sheet-rolltemplate-AtS_default table {
+    width: 100%;
+}
+
+/*/ <td class="default-c1"> /*/
+.sheet-rolltemplate-AtS_default td.sheet-default-c0 {
+    font-size: 12pt;
+    font-weight: bold;
+    color: #ffffff;
+    text-align: center;
+    font-family: "verdana";
+    border: none;
+    padding: 4px;
+    margin: 0px;
+}
+
+/*/ <div class="default_body"> /*/
+.sheet-rolltemplate-AtS_default div.sheet-default_body {
+	border: 1px solid #000000;
+	border-bottom-right-radius: 8px;
+	border-bottom-left-radius: 8px;
+	background: #f2f1cc;
+	padding: 4px;
+	margin-top: -1px;
+	color: #000000;
+}
+
+/*/ <td class="default-c1"> /*/
+.sheet-rolltemplate-AtS_default td.sheet-default-c1 {
+    font-size: 9pt;
+    font-weight: bold;
+    text-transform: capitalize;
+    color: #000000;
+    text-align: center;
+    font-family: "verdana";
+    border: 1px solid black;
+    border-right: none;
+    padding: 4px;
+    margin: 0px;
+    background-color: white;
+}
+
+/*/ <td class="default-c2"> /*/
+.sheet-rolltemplate-AtS_default td.sheet-default-c2 {
+    font-size: 10pt;
+    color: #000000;
+    text-align: center;
+    font-family: "verdana";
+    border: 1px solid black;
+    border-left: none;
+    padding: 4px;
+    margin: 0px;
+    background-color: white;
+}
+
+/*/ <td class="default-c3"> colspan="2"> /*/
+.sheet-rolltemplate-AtS_default td.sheet-default-c3 {
+    font-size: 9pt;
+    color: #000000;
+    text-align: left;
+    font-family: "verdana";
+    border: 1px solid black;
+    padding: 4px;
+    margin: 0px;
+    background-color: white;
+}
