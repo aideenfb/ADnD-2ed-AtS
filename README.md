@@ -1,6 +1,6 @@
 # ADnD-2ed-AtS
 
-This is a variation of the Advanced 2nd Edition (Simple Sheet) originally created by Dylan G. based on work by Stephen S. for use in roll20
+This is a variation of the Advanced 2nd Edition (Simple Sheet) originally created by Dylan G. based on work by Stephen S. for use in roll20. Most of the attribute names have been preserved to allow for portability between the original character sheet and this version.
 
 This version of the character sheet has been reworked and reorganized a great deal. It does not contain the "Monster Sheet" option nor many of the Skills & Powers attribute fields which the original contained. It does have support for psionics using the Skills and Powers rules with the relevant attributes added to the sheet.
 
