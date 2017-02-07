@@ -776,7 +776,10 @@ Current weight:<input type="number" name="attr_gearweighttotal" class="sheet-nob
         <div class="sheet-sp_header">
             <table class="sheet-spinfo-title">
                 <tr><td colspan="2" class="sheet-spinfo-c1">{{title}}</td></tr>
-                <tr><td class="sheet-spinfo-c2">{{splevel}} * {{sphere}}{{school}}</td></tr>
+                <tr><td class="sheet-spinfo-c2">{{splevel}} * {{school}}</td></tr>
+                {{#sphere}}
+                <tr><td class="sheet-spinfo-c2">Sphere: {{sphere}}</td></tr>
+                {{/sphere}}
             </table>
         </div>
         <div class="sheet-sp_description">
@@ -793,7 +796,11 @@ Current weight:<input type="number" name="attr_gearweighttotal" class="sheet-nob
                 {{#effects}}
                     <tr><td colspan="2" class="sheet-spinfo-c4"><span class="sheet-spproperty">Effects:</span> {{effects}}</td></tr>
                 {{/effects}}
-            </table>
+				{{#link}}
+					<tr><td colspan="2" class="spell-c2">[Link to Spell](!<br>
+                    {{link}})</td></tr>
+				{{/link}}
+			</table>
         </div>
     </div>
 </rolltemplate>
@@ -807,13 +814,48 @@ Current weight:<input type="number" name="attr_gearweighttotal" class="sheet-nob
         </div>
         <div class="sheet-default_body">
             <table>
-            {{#allprops() desc}}
+            {{#allprops() desc desc1 desc2}}
                 <tr><td class="default-c1">{{key}}</td><td class="default-c2">{{value}}</td>
-            {{/allprops() desc}}
+            {{/allprops() desc desc1 desc2}}
             {{#desc}}
                 <tr><td class="default-c3" colspan="2">{{desc}}</td></tr>
             {{/desc}}
+            {{#desc1}}
+                <tr><td class="default-c3" colspan="2">{{desc1}}</td></tr>
+            {{/desc1}}
+            {{#desc2}}
+                <tr><td class="default-c3" colspan="2">{{desc2}}</td></tr>
+            {{/desc2}}
             </table>
         </div>
     </div>
+</rolltemplate>
+
+<rolltemplate class="sheet-rolltemplate-2Esave">
+    <div class="2esave-container">
+        <div class="2esave-head">
+            <table>
+                <tr><td class="2esave-c1">Save vs. {{savevs}}</td></tr>
+                <tr><td class="2esave-c2">for {{character}}</td></tr>
+            </table>
+        </div>
+        <div class="2esave-body">
+            <table>
+                {{^savetarget}}
+                    <tr><td class="2esave-c1">{{savetarget}}No Target Number Set!</td></tr>
+                {{/savetarget}}
+                    <tr><td class="2esave-c3">Saving Throw Roll:</td><td class="2esave-c4">{{saveroll}}</td></tr>
+                    <tr><td class="2esave-c3">Saving Throw Target:</td><td class="2esave-c4">{{savetarget}}</td></tr>
+                {{#rollTotal() saveroll savetarget}}
+                    <tr><td class="2esave-c5" colspan="2">Success!</td></tr>
+                {{/rollTotal() saveroll savetarget}}
+                {{#rollGreater() saveroll savetarget}}
+                    <tr><td class="2esave-c5" colspan="2">Success!</td></tr>
+                {{/rollGreater() saveroll savetarget}}
+                {{#rollLess() saveroll savetarget}}
+                    <tr><td class="2esave-c6" colspan="2">Failed!</td></tr>
+                {{/rollLess() saveroll savetarget}}
+            </table>
+        </div>
+    </div>    
 </rolltemplate>
